@@ -20,9 +20,9 @@ public interface AppointmentHandlerController {
     @GetMapping(RestApiPath.APPOINTMENT_REQUESTS_FOR_DOCTOR)
     ResponseEntity<List<AppointmentDTOResponse>> retrieveAppointmentRequestsForDoctor(@PathVariable Long doctorId);
 
-    @GetMapping(RestApiPath.APPROVE_APPOINTMENT)
+    @PutMapping(RestApiPath.APPROVE_APPOINTMENT)
     ResponseEntity<Boolean> approveAppointment(@PathVariable Long appointmentId);
 
-    @GetMapping(RestApiPath.REJECT_APPOINTMENT)
+    @PutMapping(RestApiPath.REJECT_APPOINTMENT)
     ResponseEntity<Boolean> rejectAppointment(@PathVariable Long appointmentId);
 }
